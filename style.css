@@ -1,0 +1,329 @@
+/* ================= إعدادات عامة وتصفير الأبعاد ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 20px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+/* خلفية متحركة لإعطاء جمالية وعمق للموقع */
+
+.bg-animation {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #4f46e5 0%, transparent 70%);
+    top: 5%;
+    left: 5%;
+    z-index: 1;
+    filter: blur(100px);
+    animation: floatBg 8s infinite alternate ease-in-out;
+}
+
+@keyframes floatBg {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        transform: translate(60px, 60px) scale(1.3);
+    }
+}
+
+
+/* الحاوية الرئيسية للموقع */
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+/* ================= التنسيق الزجاجي المشترك للأقسام ================= */
+
+.section-card,
+.main-card {
+    background: rgba(30, 41, 59, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 35px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.section-card h2 {
+    font-size: 1.6rem;
+    color: #38bdf8;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(56, 189, 248, 0.2);
+    padding-bottom: 10px;
+}
+
+.section-desc {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+
+/* ================= قسم سيرة الأعمال والمشاريع ================= */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.project-3d-card {
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.project-3d-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.1);
+}
+
+.project-3d-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.project-3d-card p {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-bottom: 12px;
+}
+
+
+/* صندوق الأكواد المضيء */
+
+.code-snippet {
+    width: 100%;
+    height: 65px;
+    background: #090d16;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    padding: 10px;
+    color: #34d399;
+    font-family: monospace;
+    font-size: 0.8rem;
+    resize: none;
+    margin-bottom: 5px;
+    direction: ltr;
+}
+
+
+/* ================= قسم فريق العمل والموظفين ================= */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.team-member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(15, 23, 42, 0.4);
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-member-card:hover {
+    transform: scale(1.02);
+}
+
+.member-avatar {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.team-member-card h4 {
+    color: #fff;
+    font-size: 1.15rem;
+}
+
+.team-member-card .role {
+    font-size: 0.85rem;
+    color: #a855f7;
+    margin-top: 4px;
+    font-weight: bold;
+}
+
+
+/* ================= استمارة الطلب الرئيسية والمدخلات ================= */
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo-3d {
+    font-size: 3.2rem;
+    display: inline-block;
+    animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.header h1 {
+    font-size: 1.9rem;
+    font-weight: 900;
+    background: linear-gradient(to left, #6366f1, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 8px;
+}
+
+.input-group {
+    margin-bottom: 22px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #c084fc;
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    background: rgba(15, 23, 42, 0.6);
+    border: 2px solid #334155;
+    border-radius: 12px;
+    padding: 14px;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 12px rgba(99, 102, 241, 0.4);
+}
+
+
+/* ================= كروت الأسعار المتجاوبة ================= */
+
+.price-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.price-card {
+    cursor: pointer;
+    position: relative;
+}
+
+.price-card input {
+    position: absolute;
+    opacity: 0;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    background: rgba(15, 23, 42, 0.5);
+    border: 2px solid #334155;
+    border-radius: 14px;
+    padding: 18px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.price-card:hover .card-content {
+    border-color: #4b5563;
+    transform: translateY(-2px);
+}
+
+.price-card input:checked+.card-content {
+    border-color: #a855f7;
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.12), rgba(99, 102, 241, 0.12));
+    box-shadow: 0 10px 20px rgba(168, 85, 247, 0.15);
+}
+
+.plan-name {
+    font-weight: 700;
+    color: #fff;
+}
+
+.plan-price {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #38bdf8;
+    margin: 6px 0;
+}
+
+.plan-desc {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+
+/* ================= زر الإرسال ثلاثي الأبعاد المضمون ================= */
+
+.btn-submit {
+    width: 100%;
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    border: none;
+    border-radius: 14px;
+    padding: 16px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 6px 0 #4338ca, 0 10px 20px rgba(99, 102, 241, 0.2);
+    transition: all 0.1s ease;
+}
+
+.btn-submit:hover {
+    filter: brightness(1.1);
+}
+
+.btn-submit:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #4338ca, 0 5px 10px rgba(99, 102, 241, 0.2);
+}

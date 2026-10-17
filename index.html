@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة المطورين المحترفين | طلب مشاريع وأكواد</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="bg-animation"></div>
+
+    <div class="container">
+
+        <!-- ================= قسم سيرة الأعمال ونماذج الأكواد ================= -->
+        <section class="section-card portfolio-section">
+            <h2>📁 معرض أعمالنا (نماذج الأكواد المتاحة)</h2>
+            <p class="section-desc">يمكنك تحديد الأكواد المنسقة أدناه ونسخها مباشرة لاستخدامها في مشاريعك</p>
+
+            <div class="projects-grid">
+                <div class="project-3d-card">
+                    <h3>صفحة هبوط زجاجية (Glassmorphism)</h3>
+                    <p>تصميم عصري بالـ HTML و CSS يحتوي على تأثيرات زجاجية ممتازة.</p>
+                    <textarea class="code-snippet" readonly><div class="glass-box"><h1>مرحباً بك</h1><p>هذا تصميم زجاجي احترافي</p></div></textarea>
+                </div>
+
+                <div class="project-3d-card">
+                    <h3>أزرار ثلاثية الأبعاد (3D Buttons)</h3>
+                    <p>مجموعة أزرار تفاعلية تتحرك وتتجاوب مع حركة الماوس وضغطاته.</p>
+                    <textarea class="code-snippet" readonly><button class="btn-3d">اضغط هنا</button></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= قسم موظفي وفريق الشركة ================= -->
+        <section class="section-card team-section">
+            <h2>👥 فريق العمل الاحترافي</h2>
+            <div class="team-grid">
+                <div class="team-member-card">
+                    <div class="member-avatar">👨‍💻</div>
+                    <h4>رؤوف كادري</h4>
+                    <span class="role">مطور واجهات (Front-End)</span>
+                </div>
+                <div class="team-member-card">
+                    <div class="member-avatar">🎨</div>
+                    <h4>فريق التصميم</h4>
+                    <span class="role">مصمم تجربة مستخدم (UI/UX)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= الكرت الرئيسي لإرسال الطلبات ================= -->
+        <main class="main-card">
+            <header class="header">
+                <div class="logo-3d">🚀</div>
+                <h1>اطـلب موقعك الاحـترفي الآن</h1>
+                <p>امْلأ الاستمارة وسنتواصل معك في أقرب وقت لبدء مشروعك</p>
+            </header>
+
+            <!-- تم جعل الفورم محلي وبسيط جداً ليتم التحكم فيه بالـ JS بدون خدمات خارجية -->
+            <form class="order-form">
+
+                <div class="input-group">
+                    <label for="name">الإسم الكامل</label>
+                    <input type="text" id="name" placeholder="أدخل اسمك الكريم" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">بريدك الإلكتروني</label>
+                    <input type="email" id="email" placeholder="name@example.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="description">وصف الموقع المطلوب</label>
+                    <textarea id="description" rows="4" placeholder="اشرح لنا فكرتك، الألوان المفضلة، وعدد الصفحات..." required></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label>اختر الميزانية / السعر المناسب لك</label>
+                    <div class="price-options">
+                        <label class="price-card">
+                            <input type="radio" name="السعر_المختار" value="اقتصادي (150$-300$)" checked>
+                            <span class="card-content">
+                                <span class="plan-name">اقتصادي</span>
+                                <span class="plan-price">150$ - 300$</span>
+                                <span class="plan-desc">موقع تعريفي صفحة واحدة</span>
+                            </span>
+                        </label>
+
+                        <label class="price-card">
+                            <input type="radio" name="السعر_المختار" value="متوسط (400$-800$)">
+                            <span class="card-content">
+                                <span class="plan-name">محتـرف</span>
+                                <span class="plan-price">400$ - 800$</span>
+                                <span class="plan-desc">موقع متعدد الصفحات للشركات</span>
+                            </span>
+                        </label>
+
+                        <label class="price-card">
+                            <input type="radio" name="السعر_المختار" value="متقدم (+1000$)">
+                            <span class="card-content">
+                                <span class="plan-name">متقدم / خاص</span>
+                                <span class="plan-price">+1000$</span>
+                                <span class="plan-desc">متجر إلكتروني أو منصة خاصة</span>
+                            </span>
+                        </label>
+
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    <span>إرسال الطلب الآن ✨</span>
+                </button>
+            </form>
+        </main>
+    </div>
+
+    <!-- ربط ملف الجافا سكريبت -->
+    <script src="script.js"></script>
+</body>
+
+</html>
